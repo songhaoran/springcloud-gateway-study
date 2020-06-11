@@ -38,7 +38,7 @@ public class GatewayApplication {
                         .filters(f -> f.filter(myGateWayFilter()))
                         .uri("http://localhost:8003"))
 
-                // 实现不同请求转到不同机器
+                // 实现根据请求路径,转发到不同域名
                 .route(p -> p
                         .path("/query/**")
                         .uri("http://localhost:8003"))
